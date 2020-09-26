@@ -54,8 +54,9 @@
     <script>        
         function moedas() {
             let moeda = document.querySelector('.dolar').value 
+
             let xhttp = new XMLHttpRequest();
-            xhttp.open("GET",`https://economia.awesomeapi.com.br/${moeda}-BRL`)
+            xhttp.open("GET",`https://economia.awesomeapi.com.br/json/${moeda}-BRL`)
             
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
@@ -63,6 +64,7 @@
                     document.getElementById("resultado").innerHTML= (USD.high);
                 }
                 xhttp.send();
+                event.preventDefault()
             }  
         }
     </script>
