@@ -51,13 +51,9 @@
         <p>Valor da moeda em Real:</p> <div id="resultado">...</div>
         
     </div>
-    <script>
-        
-        
+    <script>        
         function moedas() {
-            let moeda = document.querySelector('.dolar').value
-            
-            
+            let moeda = document.querySelector('.dolar').value 
             let xhttp = new XMLHttpRequest();
             xhttp.open("GET",`https://economia.awesomeapi.com.br/${moeda}-BRL`)
             
@@ -67,9 +63,7 @@
                     document.getElementById("resultado").innerHTML= (USD.high);
                 }
                 xhttp.send();
-                
-            }
-            
+            }  
         }
     </script>
 </body>
