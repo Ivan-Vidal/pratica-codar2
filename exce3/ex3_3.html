@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3 atividade 3</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+        
+        h2 {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>03 - Seguindo do exercício 02, adicione o .sort para filtrar o array exibido no HTML. alfabeticamente </h1>
+        <h2>Deuses Nórdicos</h2>
+        <p id="alf"></p>
+        <input type="button" onclick="myFunction()" value="Clique">
+    </div>
+
+    <script>
+        var deuses = [" Odin ", " Loki ", " Thor "];
+        document.getElementById("alf").innerHTML = deuses;
+
+        function myFunction() {
+            deuses.sort();
+            document.getElementById("alf").innerHTML = deuses;
+        }
+    </script>
+</body>
+
+</html>

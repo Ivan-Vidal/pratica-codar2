@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="py-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 4 atividade 2</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>02 - Dentro da div com o id 'resultado', escreva os números de 0 ~ 10 (escolha uma das opções utilizado no exercício anterior)</h1>
+        <input type="button" value="Clique em mim" onclick="repet()">
+        <p id='resultado'>Será exibido aqui...</p>
+        
+    </div>
+    <script>
+        repet= ()=> {
+            let result=''
+            for (let i=0; i < 11; i++){
+                result += [i]
+            }
+            
+            document.getElementById('resultado').innerHTML = (result)
+        }
+    </script>
+</body>
+
+</html>

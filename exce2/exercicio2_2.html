@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2 do exercício 2</title>
+
+
+    <style>
+        body {
+            background-color: #435784be;
+            color: white;
+        }
+        
+        #botao {
+            background-color: wheat;
+            margin-left: 53%;
+            margin-top: 40px;
+        }
+        
+        input {
+            margin-left: 50%;
+            margin-top: 20px;
+        }
+        
+        p {
+            font-size: 40pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        #muda {
+            text-align: center;
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <p>02 - Seguindo o que foi feito no exercicio 01, crie uma função que recebe 2 parâmetros e retorna a soma deles, porém caso seja passado um parâmetro vazio ela retorne zero.
+    </p>
+
+    <input type="text" id="num1" placeholder="Escreva um número">
+    <input type="text" id="num2" placeholder="Escreva outro número">
+    <input type="button" id="botao" value="Calcule" onclick="sum()">
+
+    <br><br><br>
+    <div id="muda"> A resposta aparecerá aqui...</div>
+    <script>
+        function sum() {
+            var soma1 = parseInt(document.getElementById("num1").value);
+            var soma2 = parseInt(document.getElementById("num2").value);
+
+            var result = soma1 + soma2;
+
+            if (Number.isNaN(result)) {
+                result = 0
+            }
+
+            document.getElementById("muda").innerHTML = parseInt(result);
+        }
+    </script>
+
+</body>
+
+</html>

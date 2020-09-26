@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3 do exercício 2</title>
+    <style>
+        body {
+            background-color: #081e52be;
+            color: white;
+        }
+        
+        #botao {
+            margin-left: 53%;
+            margin-top: 40px;
+        }
+        
+        input {
+            margin-left: 50%;
+            margin-top: 20px;
+        }
+        
+        p {
+            font-size: 40pt;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+            ;
+        }
+        
+        #idade {
+            text-align: center;
+            font-size: 20pt;
+        }
+        
+        label {
+            display: block;
+            margin-left: 50px;
+            text-align: center;
+            font: 700 20pt;
+        }
+        
+        .container {
+            width: 700px;
+            height: 500px;
+            margin-left: 600px;
+            margin-top: 300px;
+            display: block;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>03 - Crie uma função que recebe o ano de nascimento da pessoa informando se ela é maior de idade ou menor.
+        </h1>
+        <label for="ano">Digite o seu ano de nascimento<small>(Utilize o formato aaaa)</small></label>
+        <input type="text" id="ano" placeholder="digite seu ano de nascimento" size="23">
+        <input type="button" id="botao" value="Verificar" onclick="verifica()"><br><br><br>
+        <div id="idade"> Se você for maior ou menor de idade aparecerá aqui...</div>
+    </div>
+    <script>
+        function verifica() {
+            var ano_atual = new Date().getFullYear();
+            var ano_informado = parseInt(document.getElementById("ano").value);
+
+            idade = ano_atual - ano_informado;
+
+            if (idade >= 18) {
+                document.getElementById("idade").innerHTML = "Você é Maior de idade com " + idade + " anos";
+            } else {
+                document.getElementById("idade").innerHTML = "Você é menor de idade, tendo apenas " + idade + " anos";
+            }
+
+        }
+    </script>
+</body>
+
+</html>

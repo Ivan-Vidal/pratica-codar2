@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3 atividade 2</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #container ul {
+            list-style: none;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+        
+        h2 {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>02 - Com o que foi feito no exercício anterior, exiba todos os nomes, dentro do html: ul id="nomes" </h1>
+        <h2>Deuses Nórdicos</h2>
+        <ul id="nomes"></ul>
+        <input type="button" onclick="gerar()" value="Clique">
+    </div>
+    <script>
+        //importante function
+        function gerar() {
+            let nomes = ["Odin", "Loki", "Thor"];
+            let lista = document.getElementById('nomes');
+            for (var i = 0; i < nomes.length; i++) {
+
+                let item = document.createElement('li');
+                item.appendChild(document.createTextNode(nomes[i]));
+                lista.appendChild(item);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="py-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 4 atividade 4-2</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        ul {
+            font-size: 20pt;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>04 - A partir do seguinte vetor e utilizando os métodos de array (map, reduce, filter e find):
+            4.2- Utilizando o filter
+            Crie uma variáveis que tenha apenas os usuários que trabalham na Apple e com mais de 30 anos: [{ nome: 'Felipe', idade: 30, empresa: 'Apple' }}] </h1>
+            <input type="button" value="Clique em mim" onclick="repet()">
+            <ul id='resultado'></ul>
+            
+        </div>
+        <script>
+            const usuarios = [{nome: 'Caio', idade: 25, empresa: 'Google'},
+            {nome: 'Tiago', idade: 35, empresa: 'Microsoft'},
+            {nome: 'Felipe', idade: 30, empresa: 'Apple'}]
+            
+            function repet(){
+                
+                
+                
+                let trabalhaApple = usuarios.filter(usuario => usuario.idade >= 30 && usuario.empresa === "Apple" )
+                for(var i = 0; i < trabalhaApple.length; i++) {
+                    document.getElementById('resultado').innerHTML = (`nome: ${trabalhaApple[i].nome}, 
+                    idade: ${trabalhaApple[i].idade} anos, 
+                    empresa: ${trabalhaApple[i].empresa}`)
+                    
+                    
+                }
+                
+                
+            } 
+            
+            
+        </script>
+    </body>
+    
+    </html>

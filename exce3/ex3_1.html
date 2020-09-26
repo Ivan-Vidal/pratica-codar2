@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3 atividade 1</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+        
+        h2 {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>01 - Crie o seguinte array: var deuses = ['Odin', 'Loki', 'Thor'] E Exiba a quantidade/comprimento que ele tem com a função .length.</h1>
+
+        <p id="exibir">A quantidade que deuses são de ...</p>
+
+        <input type="button" name="botao" value="Click" id="botao" onclick="ver()">
+    </div>
+    <script>
+        function ver() {
+            var deuses = ['Odin', 'Loki', 'Thor'];
+            document.getElementById("exibir").innerHTML = deuses.length;
+        }
+    </script>
+
+</body>
+
+</html>

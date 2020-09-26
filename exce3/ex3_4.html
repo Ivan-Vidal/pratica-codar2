@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex3 atividade 4</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+        
+        h2 {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>04 - Exiba a quantidade de letras que possuem o texto inserido ao clicar no botão.
+        </h1>
+        <h2>Nomes e seus tamanhos!</h2>
+        <input type="text" id="nome"><br><br>
+        <input type="button" onclick="verifica() " value="Clique ">
+        <p id="exibir">A quantidade de letras que seu nome possui é de...</p>
+    </div>
+    <script>
+        function verifica() {
+            var text = document.getElementById("nome").value;
+            document.getElementById("exibir").innerHTML = "Seu nome tem " + text.length + " letras de comprimento";
+        }
+    </script>
+</body>
+
+</html>

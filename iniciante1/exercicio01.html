@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html lang="pt-br">
+<head>
+<title>exercício 01</title>
+<meta charset="UTF-8" />
+<script type="text/javascript">
+
+ function validaForm() {
+    if(frm.tnome.value == "" || frm.tnome.value == null || frm.tnome.value.lenght < 3){
+    alert("Informe o nome completo.");
+  }
+  if(frm.tpont.value == "" || frm.tpont.value == null){
+    alert("Informe quantos Pontos.");
+  }
+  if(frm.tnum.value == "" || frm.tnum.value == null){
+    alert("Informe a Nota.");
+  }
+  if (frm.tuniv.value == ""|| frm.tuniv.value == null) {
+    alert("Informe o nome da Universidade.")
+
+  }
+  if(frm.tEmp.value == "" || frm.tEmp.value == null || frm.tEmp.value.lenght < 3){ 
+    alert("Informe o nome da empresa.");
+  }
+   if(frm.thora.value == "" || frm.thora.value == null) { 
+    alert("Informe o Horário.");
+}
+}
+
+</script>
+</head>
+<style type="text/css">
+  form {
+    width: 300px;
+    box-shadow: rgba(0,0,0,.4);
+    font-size: 12pt;
+  }
+
+
+</style>
+<body>
+<form  name="frm" method="post" action=""  onsubmit=" return validaForm();">
+<fieldset>
+<legend>
+Cadastro de Aluno
+</legend>
+<p><label id="tnome">Nome: </label>
+<input type="text" name="cnome" id="tnome" placeholder="Nome completo"></p>
+<p><label id="tpont">Pontos: </label><input type="number" name="cpont" id="tpont" size="4" min="0" max="9999" placeholder="Pontos"></p>
+<p><label id="tnum">Nota: </label><input type="number" name="cnum" id="tnum" min="0" max="10" size="2"  placeholder="Nota"></p>
+<p><label id="tuniv">Universidade: </label><input type="text" name="cuniv" id="tuniv" size="10" placeholder="Universidade"></p>
+<p><label id="tEmp">Empresa:</label><input type="text" name="cEmp" id="tEmp" size="10" placeholder="Empresa" ></p>
+<fieldset> <legend>Avatar</legend>
+  <select id="avatar">
+<p><option> Avatar1</option></p>
+<p><option> Avatar2</option></p>
+<p><option> Avatar3</option></p>
+</select></fieldset>
+<p><label id="thora">Horário: </label><input type="time" name="chora" id="thora"></p><br>
+<input type="submit" name="botao" value="Cadastrar" />
+</fieldset>
+</form>
+  </body>
+  </html>

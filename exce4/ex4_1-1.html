@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 4 atividade 1-1</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>1.1 - Dentro da div com o id 'resultado', escreva 2x ('Repetição').
+        </h1>
+        <button onclick="repet()">Clique em aqui</button> 
+        <p id='resultado'>Será exibido aqui...</p>
+        
+    </div>
+    <script>
+        function repet() {
+            var result = [];
+            
+            for (var i = 0; i < 2; i++) {
+                result += "Repetição" + '<br>';
+            }
+            document.getElementById('resultado').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

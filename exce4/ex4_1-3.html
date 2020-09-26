@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="py-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 4 atividade 1-3</title>
+    <style>
+        body {
+            margin: 0;
+            background: rgb(56, 56, 133);
+            color: white;
+        }
+        
+        #container {
+            width: 90vw;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>1.3 - Dentro da div com o id 'resultado', escreva 5x ('Repetição'). (agora com forEach)
+        </h1>
+        <input type="button" value="Clique em mim" onclick="repet()">
+        <p id='resultado'>Será exibido aqui...</p>
+        
+    </div>
+    <script>
+        function repet() {
+            let result = [1, 2, 3, 4, 5];
+            
+            result.forEach(function(item, index) {
+                if(item === 1){
+                    result[index]= 'Repetição' + '<br>'}
+                    else if (item ===2){
+                        result[index]= 'Repetição' + '<br>'}
+                        else if(item === 3){
+                            result[index]= 'Repetição' + '<br>'}
+                            else if(item === 4){
+                                result[index]= 'Repetição' + '<br>'}
+                                else if(item === 5){
+                                    result[index]= 'Repetição' + '<br>'}
+                                    else{console.log('erro')}
+                                }); 
+                                document.getElementById('resultado').innerHTML = (result)
+                                
+                            }
+                            
+                            
+                        </script>
+                    </body>
+                    
+                    </html>
