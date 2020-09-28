@@ -17,17 +17,29 @@
     <h1>Endereço</h1>
     <h2>Abaixo você pode verificar seu endereço pelo CEP</h2>
     <label for="cep">Insira seu CEP:</label>
-    <input type="number" name="cep" id="cep"><br> <br>
+    <input type="number" name="cep" id="cep" placeholder="Digite o CEP" required='' maxlength="9"><br> <br>
     <input type="submit" name="bt_cep" id="bt_cep" onclick="verifica()">
     <ul>
 
     </ul>
 </div>
 <script>
-    let cepReal = document.getElementById('cep').value
+    
     verifica = () =>{
+        let cepReal = document.getElementById('cep').value
         
+        let xhttp = new XMLHttpRequest();
+            xhttp.open("GET",`https://cep.awesomeapi.com.br/json/${cepReal}`, )
+            xhttp.send();
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    let json = JSON.parse(this.responseText);
+                    document.write(json.cep,json.address_type, json.address_name)
+                  //  document.createElement('li')
+
     }
+            }
+            }
 </script>
 </body>
 </html>
