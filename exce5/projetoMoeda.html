@@ -30,6 +30,11 @@
         p {
             font-size: 20pt;
         }
+        div{
+         
+            font-size: 20pt;
+        }
+        
         label {
             font-size: 20pt;
         }
@@ -48,7 +53,8 @@
         </select><br><br>
         <input type="submit" id="botao" value="Submit" onclick="moedas()"/>
         
-        <p>Valor da moeda em Real:</p> <div id="resultado">...</div>
+        <p>Valor da moeda em Real:</p>
+         <div id="resultado">...</div>
         
     </div>
     <script>        
@@ -56,17 +62,20 @@
             let moeda = document.querySelector('.dolar').value 
 
             let xhttp = new XMLHttpRequest();
-            xhttp.open("GET",`https://economia.awesomeapi.com.br/json/${moeda}-BRL`)
-            
-            xhttp.onreadystatechange = function () {
+            xhttp.open("GET",`https://economia.awesomeapi.com.br/json/all/${moeda}-BRL`, )
+            xhttp.send();
+
+         xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     var json = JSON.parse(this.responseText);
-                    document.getElementById("resultado").innerHTML= (USD.high);
+                    document.getElementById("resultado").innerHTML =  json.USD.high
+                
                 }
-                xhttp.send();
-                event.preventDefault()
-            }  
+               
         }
+        }
+        
+        
     </script>
 </body>
 </html>
