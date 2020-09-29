@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Busca de endereço</title>
     <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+            margin-left:-33px ;
+        }
         .container{
             width: 90%;
-            text-align: center;
-            justify-content: center;
-        }
+            margin-left: 50px;
+                   }
     </style>
 </head>
 <body>
+   
     <div class="container">
+       
     <h1>Endereço</h1>
-    <h2>Abaixo você pode verificar seu endereço pelo CEP</h2>
+    <h4>Abaixo você pode verificar seu endereço pelo CEP</h4>
     <label for="cep">Insira seu CEP:</label>
     <input type="number" name="cep" id="cep" placeholder="Digite o CEP" required='' maxlength="9"><br> <br>
-   
+    
+  
+    <input type="submit" name="bt_cep" id="bt_cep" onclick="verifica()" value="Pesquisar"><br><br><br><br>
     <ul id="lista">
-
+        
     </ul>
-    <input type="submit" name="bt_cep" id="bt_cep" onclick="verifica()">
 </div>
+
+
 <script>
     
     verifica = () =>{
@@ -35,11 +47,16 @@
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
                     var json = JSON.parse(this.responseText);
-                    var lista = document.getElementById('lista')
-            for (var i = 0; i < json.length; i++) {
-               var item = document.createElement('li');
-                item.appendChild(document.createTextNode(json[i]));
-                lista.appendChild(item);
+                    var lista = document.getElementById('lista').lastChild
+            for (var i = 0; i < 1; i++) {
+         document.getElementById('lista').innerHTML = ` <h4>Endereço do CEP</h4>
+         <li> CEP: ${json.cep}</li><br>
+         <li> Endereço: ${json.address}</li><br>
+         <li> Tipo de endereço: ${json.address_type}</li><br>
+         <li> Estado: ${json.state}</li><br>
+         <li> Bairro: ${json.district}</li><br>
+         <li> Cidade: ${json.city}</li><br>
+         <li> DDD: ${json.ddd}</li><br>`
             }
     }
             }
