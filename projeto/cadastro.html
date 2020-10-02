@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<title>Cadastro</title>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+	
+	<style>
+		body {
+		margin: 0;
+    padding: 0;
+   
+		}
+    .container{
+      display: flex;
+      justify-content:space-between;
+    }
+    .para{
+      text-align: center;
+      color: black;
+      font-size: 40px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    .img-1{
+      width: 40%;
+    }
+    .form{
+      width:40%;
+      color: white;
+      margin-top: 20px;
+      margin-left: -300px;
+    }
+    .form-2{
+      background-color: #000b76;
+      border-radius: 4%;
+      padding-top: 10px;
+    }
+    .form-group{
+      width: 90%;
+      margin-left: 25px;
+    }
+    .btn{
+      width: 90%;
+      margin-left: 25px;
+      margin-bottom: 20px;
+      transition: 0.3s ease-in;
+    }
+    .btn:hover{
+      background-color: rgb(21, 21, 182);
+    }
+    .link{
+				width:100% ;
+				margin-left: 16px;
+				font-size: 20px;
+        color: black;
+      }
+      a{
+        text-decoration: none;
+        transition: 0.3s ease-in;
+      }
+      a:hover{
+        text-decoration: none;
+        color: #000b76;
+      }
+      .logo-1{
+            font-size: 70px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            color: #0099ff;
+            text-align: center;
+        }
+
+        .logo{
+            font-size: 35px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color:#bbb8b8 ;
+        }
+        .fundo{
+          margin-top: -30px;
+          align-items: ;
+        }
+
+  
+ 
+</style>
+
+<script type="text/javascript">
+ function cadastrar(){		
+    console.log("efetuando login...")
+
+    let nome= document.getElementById("nome");
+	let email = document.getElementById("email");
+	let senha = document.getElementById("senha");
+	let csenha = document.getElementById("csenha");
+
+	
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST","http://52.91.139.190/fsapi/users/auth/register-jwt", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+            alert( 'Usuário '+ json.user.name + ' Cadastrado com sucesso');
+        }
+        if (this.status == 422) {
+			alert("Usuário já existe");
+        }
+    };
+    xhttp.send(JSON.stringify({
+    	"name" : nome.value,
+        "email": email.value,
+        "password": senha.value,
+        "confirma_password" : csenha.value, 
+   }));
+    event.preventDefault()
+   }
+  </script>
+</head>
+<body>
+	<div class="container">
+    <div id="welcome"></div>
+    <div class="form">
+      <p class="para">make your registration to
+      </p><p class="logo-1">Sty<strong class="logo">Register</strong></p><br>
+      <div class="form-2">
+	<form method="post"  action="" name="frm" id="frm" >
+    
+    <div class="form-group">
+		
+    <p><label for="nome">Name </label>
+        <input type="text" name="nome" id="nome" size="20" maxlength="30"  required=""  placeholder="Name and last name" class="form-control"></p>
+    </div>
+    <div class="form-group">
+      <p><label for="email">E-mail </label><input type="email" name="email" id="email" size="20" maxlength="30" placeholder="Your E-mail" required="" class="form-control"></p>
+      </div>
+      <div class="form-group">
+    <p><label for="senha">Password</label><input type="password" name="senha" id="senha" size="15" maxlength="12" placeholder="Password" required="" class="form-control"></p>
+      </div>
+      <div class="form-group">
+    <p><label for="csenha">Confirm Password </label><input type="password" name="csenha" id="csenha" size="15" maxlength="12" placeholder="Password again" required="" class="form-control"></p><br>
+      </div>
+      <button type="submit" class="btn btn-primary" onclick="cadastrar()">Register</button><br>
+  </form>
+</div>
+    <div class="link">
+      <span >
+        already registered?
+        ? 
+      <b>
+        <a href="pagjs.html" target="_blank" id="link">Come this way
+        </a>
+      </b>
+    </span>
+    </div>
+</div>
+    <img src="img/undraw_press_play_bx2d.svg" alt="" class="img-1">
+     
+    
+    
+   
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" class="fundo" viewBox="0 0 1440 320">
+      <path fill="#000b76" fill-opacity="1" d="M0,96L120,133.3C240,171,480,245,720,261.3C960,277,1200,235,1320,213.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path>
+    </svg>
+  </body>
+</html>

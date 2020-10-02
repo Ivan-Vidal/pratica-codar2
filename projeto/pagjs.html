@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<meta charset="utf-8">
+	<title>Faça seu Login| Cadastre-se</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<style type="text/css">	
+	body {
+		margin: 0;
+		padding: 0;
+		background-color: #ffffff;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+		font-size: 20px;
+	}
+	.fundo {
+		width: 100%;
+	}	
+	a {
+		color: #111111;
+	text-decoration: none;
+	transition: 0.3s ease-in;
+	}
+	a:hover {
+		color: #0099ff;
+		
+		text-decoration: none;
+	}
+	.container{
+		display: flex;
+		justify-content: space-between;
+	}
+	.parte1{
+		width: 40%;
+	}
+
+	div.input {
+		width: 100%;
+		color:white;
+		background-color: #0099ff;
+		border-radius: 2%;
+		padding-top: 10px;
+		box-shadow: rgba(0, 0, 0, .9);
+		
+		
+	}
+	.logo-1{
+            font-size: 70px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+            color: #0099ff;
+			text-align: center;
+        }
+
+        .logo{
+            font-size: 35px;
+			font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+color:#bbb8b8 ;
+        }
+		
+	
+	.titulo {
+		text-align: center;
+		font-size: 40px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+	.titulo-1{
+		text-align: center;
+		font-size: 26px;
+		font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	}
+	.hero-img{
+		width:500px;
+		margin-bottom: 0;
+		padding-bottom:0 ;
+	}
+	.form-group{
+		width: 90%;
+		margin-left: 25px;
+		
+		
+			}
+			.link{
+				width:100% ;
+				margin-left: 16px;
+				font-size: 20px;
+			}
+			.btn{
+				width: 90%;
+				margin-left: 25px;
+				margin-bottom: 10px;
+				background-color: #1b6fcf;
+				transition: 0.3s ease-in;
+			}
+			.btn:hover{
+				background-color: #0b2e57;
+
+			}
+	
+
+	</style>
+			<script>
+				
+			function login(){
+		
+    console.log("efetuando login...")
+
+    let email = document.getElementById("email");
+	let password = document.getElementById("password");
+	
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST","http://52.91.139.190/fsapi/users/login", true);
+    xhttp.setRequestHeader("Content-type", "application/json");
+    
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            var json = JSON.parse(this.responseText);
+			document.getElementById("welcome");
+			alert('Bem-vindo '+ json.user.name);
+		}
+		    };
+    xhttp.send(JSON.stringify({
+        "email": email.value,
+        "password": password.value,
+   }));
+    event.preventDefault()
+   }
+</script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="parte1">
+				<P class="titulo">Welcome
+					<small>to</small>
+					<p class="logo-1">Sty<strong class="logo">Register</strong></p>
+				<P class="titulo-1">To Start login</P>
+	<form method="post" name="frm" id="frm"  action="">
+			<div class="input">
+					
+					<div class="form-group">
+				<label for="email">User </label>
+					<input type="email" name="email" id="email" size="20" maxlength="30" placeholder="Your User" required=""class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+				<label for="password">Password</label>
+					<input type="password" name="password" id="password" class="form-control" size="10" maxlength="13" placeholder="Password" required=""><br>
+					</div>
+
+					<button type="submit" class="btn btn-primary" onclick="login()">Acess</button><br/>
+				</div>
+			</form>
+			<div class="link">
+				<span >
+				  don't have a registration? 
+				<b>
+				  <a href="cadastro.html" target="_blank" id="link">follow here</a>
+				</b>
+			</div>
+			  </span>
+			</div>
+			<div id="welcome"></div>
+		<img src="img/undraw_Login_re_4vu2.svg" alt="" class="hero-img">
+			
+		</div>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,96L120,133.3C240,171,480,245,720,261.3C960,277,1200,235,1320,213.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"></path></svg>
+		</body>
+	</html>
