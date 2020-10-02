@@ -3,6 +3,10 @@
 <head>
 <title>exercício 01</title>
 <meta charset="UTF-8" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <script type="text/javascript">
 
  function validaForm() {
@@ -29,36 +33,105 @@
 
 </script>
 </head>
-<style type="text/css">
-  form {
-    width: 300px;
-    box-shadow: rgba(0,0,0,.4);
-    font-size: 12pt;
+<style>
+  body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color:rgb(255, 255, 255);
   }
+  .super-container{
+display: flex;
+justify-content: space-between;
+
+  }
+  .img-hero{
+    width: 70%;
+   margin: 200px 0 0 200px;
+    
+    
+  }
+.container {
+    width: 500px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 5%;
+    font-size: 15pt;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    margin: 40px  300px 0 0;
+    
+  }
+  .av {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+   
+
+  }
+  .selec{
+    width: 300px;
+   padding-right:90px;
+  }
+  .hora{
+    width: 200px;
+  }
+ 
+  .btn{
+    width: 100%;
+    height: 60px;
+    transition: all 0.3s ease-in;
+    background-color: #0099ff;
+  }
+  .btn:hover{
+    background-color: #0161a1;
+  }
+  .fundo{
+    width: 100%;
+  height: 170px;
+ 
+  }
+  .titulo{
+    text-align: center;}
 
 
 </style>
 <body>
-<form  name="frm" method="post" action=""  onsubmit=" return validaForm();">
-<fieldset>
-<legend>
-Cadastro de Aluno
-</legend>
-<p><label id="tnome">Nome: </label>
-<input type="text" name="cnome" id="tnome" placeholder="Nome completo"></p>
-<p><label id="tpont">Pontos: </label><input type="number" name="cpont" id="tpont" size="4" min="0" max="9999" placeholder="Pontos"></p>
-<p><label id="tnum">Nota: </label><input type="number" name="cnum" id="tnum" min="0" max="10" size="2"  placeholder="Nota"></p>
-<p><label id="tuniv">Universidade: </label><input type="text" name="cuniv" id="tuniv" size="10" placeholder="Universidade"></p>
-<p><label id="tEmp">Empresa:</label><input type="text" name="cEmp" id="tEmp" size="10" placeholder="Empresa" ></p>
-<fieldset> <legend>Avatar</legend>
-  <select id="avatar">
-<p><option> Avatar1</option></p>
-<p><option> Avatar2</option></p>
-<p><option> Avatar3</option></p>
-</select></fieldset>
-<p><label id="thora">Horário: </label><input type="time" name="chora" id="thora"></p><br>
-<input type="submit" name="botao" value="Cadastrar" />
-</fieldset>
+  <div class="fundo">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,256L26.7,245.3C53.3,235,107,213,160,186.7C213.3,160,267,128,320,149.3C373.3,171,427,245,480,234.7C533.3,224,587,128,640,90.7C693.3,53,747,75,800,80C853.3,85,907,75,960,64C1013.3,53,1067,43,1120,64C1173.3,85,1227,139,1280,165.3C1333.3,192,1387,192,1413,192L1440,192L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"></path></svg>
+</div>
+  <div class="super-container">
+
+    <div class="">
+      <img src="../img/undraw_fill_forms_yltj.svg" class="img-hero" alt="">
+    </div>
+   
+  <div class="container">
+    <h1 class="titulo">Cadastro de Aluno</h1>
+<form  name="frm" method="post" action=""   onsubmit=" return validaForm();">
+
+<p><label id="tnome">Nome </label>
+<input type="text" name="cnome" id="tnome" class="form-control" placeholder="Nome completo"></p>
+<p><label id="tpont">Pontos </label><input type="number" class="form-control" name="cpont" id="tpont" size="4" min="0" max="9999" placeholder="Pontos"></p>
+<p><label id="tnum">Nota: </label><input type="number" name="cnum"  class="form-control" id="tnum" min="0" max="10" size="2"  placeholder="Nota"></p>
+<p><label id="tuniv">Universidade </label><input type="text" class="form-control" name="cuniv" id="tuniv" size="10" placeholder="Universidade"></p>
+<p><label id="tEmp">Empresa </label><input type="text" class="form-control" name="cEmp" id="tEmp" size="10" placeholder="Empresa" ></p>
+<label for="">Avatar</label>
+<div class="av">
+  <div class="selec">
+  <select id="avatar" class="form-control av">
+<option> Avatar1</option>
+<option> Avatar2</option>
+<option> Avatar3</option>
+</select>
+</div>
+<div class="hora">
+<p><label id="thora">Horário </label><input type="time" name="chora"  class="form-control" id="thora"></p><br>
+</div>
+</div><br><br>
+<input type="submit"  class="btn btn-primary" name="botao" value="Cadastrar" />
 </form>
+</div>
+</div>
   </body>
   </html>
