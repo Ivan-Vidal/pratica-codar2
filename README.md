@@ -25,7 +25,7 @@
 #### Atividade 1
 - Desenvolver uma aplicação WEB usando HTML5 e Javascript(ES2020), com botões que ao clicar a cor da página muda de cor(verde-vermelho).
 
-<img src="projeto/.github/Exercicio-de-Fixa\303\247\303\243o-1-Google-Chrome-2020-10-02-01-48-57.gif" style="width:400px;">
+<img src="projeto/.github/Exercicio-de-Fixação-1-Google-Chrome-2020-10-02-01-48-57.gif" style="width:400px;">
 
 #### Atividade 2
 - 01 - Crie uma função que recebe 2 parâmetros e retorna a soma deles.
