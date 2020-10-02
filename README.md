@@ -23,9 +23,9 @@
 ## Atividades de prática em Javascript 
 
 #### Atividade 1
-- Desenvolver uma aplicação WEB usando HTML5 e Javascript(ES2020), com botões que ao clicar a cor da página muda de cor(verde-vermelho).
+- Desenvolver uma aplicação WEB usando HTML5 e Javascript(ES2020), com botões que, ao clicar a cor da página muda(verde-vermelho).
 
-<img src="projeto/.github/Exercicio-de-Fixação-1-Google-Chrome-2020-10-02-01-48-57.gif" style="width:400px;">
+<img src="projeto/.github/Exercicio-de-Fixação-1-Google-Chrome-2020-10-02-01-56-46.gif" style="width:400px;">
 
 #### Atividade 2
 - 01 - Crie uma função que recebe 2 parâmetros e retorna a soma deles.
@@ -46,48 +46,49 @@ Ex: 'lol é melhor que Dark Souls' (falso) / e Falso na vida real tmb.
 
 #### Atividade 3
 
-01 - Crie o seguinte array: var deuses = ['Odin', 'Loki', 'Thor']
+- 01 - Crie o seguinte array: var deuses = ['Odin', 'Loki', 'Thor']
 E Exiba a quantidade/comprimento que ele tem com a função .length
 
-02 - Com o que foi feito no exercício anterior, exiba todos os nomes, dentro do html: <ul id="nomes"></ul>
+- 02 - Com o que foi feito no exercício anterior, exiba todos os nomes, dentro do html: <ul id="nomes"></ul>
 
-exemplo:
+- 03 - Seguindo do exercício 02, adicione o .sort para filtrar o array exibido no HTML. alfabeticamente  
 
-
-03 - Seguindo do exercício 02, adicione o .sort para filtrar o array exibido no HTML. alfabeticamente  
-
-04 - Exiba a quantidade de letras que possuem o texto inserido ao clicar no botão.
+- 04 - Exiba a quantidade de letras que possuem o texto inserido ao clicar no botão.
 
 Exemplos de entrada e saída:
 'Caio' // 4
 'Felipe' // 6
 'Roberto' // 7
 'Tiago' // 5
-EXTRA: adicione CSS nos exercícios para melhor exibição dos resultado
+
+*EXTRA: adicione CSS nos exercícios para melhor exibição dos resultado*
 
 
 #### Atividade 4
-01- Dentro da div com o id 'resultado', escreva 1x ('Repetição'). dica: 'innerHTML', el.innerHTML = 'Repetição';
+- 01- Dentro da div com o id 'resultado', escreva 1x ('Repetição'). dica: 'innerHTML', el.innerHTML = 'Repetição';
 
 1.1 - Dentro da div com o id 'resultado', escreva 2x ('Repetição').
 1.2 - Dentro da div com o id 'resultado', escreva 20x ('Repetição'). (use o 'for')
 1.3 - Dentro da div com o id 'resultado', escreva 5x ('Repetição'). (agora com forEach)
 1.3 - Dentro da div com o id 'resultado', escreva 5x ('Repetição'). (agora com while)
-02 - Dentro da div com o id 'resultado', escreva os números de 0 ~ 10 (escolha uma das opções utilizado no exercício anterior)
-03 - Dentro da div com o id 'resultado', escreva os números pares até 20... (ex 2,4,6...20)
+- 02 - Dentro da div com o id 'resultado', escreva os números de 0 ~ 10 (escolha uma das opções utilizado no exercício anterior)
+- 03 - Dentro da div com o id 'resultado', escreva os números pares até 20... (ex 2,4,6...20)
 
-04 - A partir do seguinte vetor e utilizando os métodos de array (map, reduce, filter e find):
+- 04 - A partir do seguinte vetor e utilizando os métodos de array (map, reduce, filter e find):
 const usuarios = [
  { nome: 'Caio', idade: 25, empresa: 'Google' },
  { nome: 'Tiago', idade: 35, empresa: 'Microsoft' },
  { nome: 'Felipe', idade: 30, empresa: 'Apple' },
 ];
+
 4.1- Utilizando o map
 Crie uma variável que contenha todas idades dos usuários: [23, 15, 30]
+
 4.2- Utilizando o filter
-Crie uma variáveis que tenha apenas os usuários que trabalham na Apple e idade maior ou igual a 30 anos: [{ nome: 'Felipe', idade: 30, empresa: 'Apple' }}]
+Crie uma variáveis que tenha apenas os usuários que trabalham na Apple e idade maior ou igual a 30 anos: [{ nome: 'Felipe', idade: 30, empresa: 'Apple' }}];
+
 4.3- Utilizando o find
-Crie uma variável que procura por um usuário que trabalhe na empresa Google: undefined
+Crie uma variável que procura por um usuário que trabalhe na empresa Google.
 
 #### Atividade 5
 Projeto 01
@@ -96,11 +97,10 @@ Desenvolva um conversor de moedas utilizando o  XMLHttpRequest(AJAX) para requis
 
 <img src="projeto/.github/conversor-moedas.png" style="width:400px; height:400px;">
 
-O SELECT deve ser preenchida com as opções que há na API informada, ao clicar no SUBMIT a API será chamada e o response dela será mostrado na tela como no exemplo acima. O valor que deve ser utilizado do responde é ‘high’. Como no exemplo de response abaixo:
-
 
 #### Atividade 6
-Neste projeto você precisará construir uma tela para pesquisa de CEP, que no momento que o cliente inserir o CEP dele deverá retornar o seu endereço completo. Utilizando 
+Neste projeto você precisará construir uma tela para pesquisa de CEP, que no momento que o cliente inserir o CEP dele deverá retornar o seu endereço completo.
+O layout foi escolhido pelo cliente.
 
 <img src="projeto/.github/pesquisa-cep.png" style="width:400px; height:400px;">
 
