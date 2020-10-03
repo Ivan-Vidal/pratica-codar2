@@ -105,4 +105,4 @@ O layout foi escolhido pelo cliente.
 <img src="projeto/.github/pesquisa-cep.png" style="width:400px; height:400px;">
 
 
-### Desenvolvido com dedicação por, Ivan Vidal
+### Obrigado por chegar até aqui
